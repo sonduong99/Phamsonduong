@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>PayloadContent</key>
+    <array>
+      <dict>
+        <key>PayloadType</key>
+        <string>com.apple.applicationaccess</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>PayloadIdentifier</key>
+        <string>com.example.restrictions.nocamera</string>
+        <key>PayloadUUID</key>
+        <string>11111111-2222-3333-4444-555555555555</string>
+        <key>PayloadEnabled</key>
+        <true/>
+        <key>allowCamera</key>
+        <false/>
+      </dict>
+    </array>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
+    <key>PayloadIdentifier</key>
+    <string>com.example.profile.nocamera</string>
+    <key>PayloadUUID</key>
+    <string>66666666-7777-8888-9999-AAAAAAAAAAAA</string>
+    <key>PayloadDisplayName</key>
+    <string>No Camera Profile</string>
+    <key>PayloadDescription</key>
+    <string>This profile disables the device camera.</string>
+    <key>PayloadOrganization</key>
+    <string>Your Organization</string>
+  </dict>
+</plist>

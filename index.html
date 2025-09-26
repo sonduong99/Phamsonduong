@@ -1,38 +1,14 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Camera Lock</title>
+  <meta charset="utf-8">
+  <title>MDM – Disable Camera</title>
 </head>
-<body>
-<h1>Camera đã bị khóa!</h1>
-<p>Bấm nút bên dưới để bật/tắt camera trong trình duyệt (không ảnh hưởng camera ngoài app).</p>
-
-<video id="video" width="300" autoplay style="display:none;"></video>
-<button id="toggle">Bật Camera</button>
-
-<script>
-const video = document.getElementById('video');
-const btn = document.getElementById('toggle');
-let stream;
-
-btn.onclick = async () => {
-    if (!stream) {
-        try {
-            stream = await navigator.mediaDevices.getUserMedia({ video: true });
-            video.srcObject = stream;
-            video.style.display = "block";
-            btn.textContent = "Tắt Camera";
-        } catch (err) {
-            alert("Không thể mở camera: " + err);
-        }
-    } else {
-        stream.getTracks().forEach(track => track.stop());
-        stream = null;
-        video.style.display = "none";
-        btn.textContent = "Bật Camera";
-    }
-};
-</script>
+<body style="font-family: sans-serif; text-align: center; margin-top: 50px;">
+  <h2>MDM – Disable & Hide Camera</h2>
+  <p>Bấm nút bên dưới để tải và cài cấu hình. Khi cài xong, Camera sẽ bị khóa và icon biến mất.</p>
+  <a href="disable_camera.mobileconfig">
+    <button style="padding: 12px 24px; font-size: 16px;">📥 Cài Cấu Hình</button>
+  </a>
 </body>
 </html>
